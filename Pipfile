@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sqlalchemy = "*"
+click = "*"
+pytest = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[app]
+id = "quiz-app"
+modules = ["lib.cli", "lib.db.init_db", "lib.models.base", "lib.models.quiz", "lib.models.question", "lib.models.answer"]
+
+[paths]
+lib = "lib"
+tests = "tests"
